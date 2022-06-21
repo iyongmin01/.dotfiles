@@ -11,3 +11,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/.zshrc_aliases
 source ~/.dotfiles/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.dotfiles/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zlogin
