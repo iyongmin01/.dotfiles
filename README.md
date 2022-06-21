@@ -68,3 +68,12 @@ su - [name]
 vi ~/.ssh/authorized_keys
 ```
 
+## ETC
+
+### AWS
+
+AWS Themes
+```bash
+$ vi .zshenv
+export STARSHIP_CONFIG=~/.dotfiles/themes/starship/pastel-powerline-aws.toml
+```
