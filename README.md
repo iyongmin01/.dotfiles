@@ -76,4 +76,6 @@ AWS Themes
 ```bash
 $ vi .zshenv
 export STARSHIP_CONFIG=~/.dotfiles/themes/starship/pastel-powerline-aws.toml
+
+$ aws eks --region ${AWS_REGION} update-kubeconfig --name ${CLUSTER_NAME}
 ```
