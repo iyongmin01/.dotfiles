@@ -2,6 +2,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export STARSHIP_CONFIG=~/.dotfiles/themes/starship/pastel-powerline.toml
 #export STARSHIP_CONFIG=~/.dotfiles/themes/starship/pastel-powerline-aws.toml  # aws
 
+export DISABLE_MAGIC_FUNCTIONS=true
+
 export LANG=en_US.UTF-8
 export LC_ADDRESS=en_US.UTF-8
 export LC_IDENTIFICATION=en_US.UTF-8
