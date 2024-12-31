@@ -134,6 +134,7 @@ format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
+utc_time_offset = "+9"
 style = "bg:#33658A"
 format = '[[ ♥ $time ](bg:#33658A)]($style)'
 
