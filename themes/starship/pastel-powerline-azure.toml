@@ -1,7 +1,7 @@
 format = """
-[](#D35D6E)\
-[$username$hostname](fg:#FFFFFF bg:#D35D6E)\
-[](bg:#1572A1 fg:#D35D6E)\
+[](#FFA500)\
+[$env_var$username$hostname](fg:#1B2430 bg:#FFA500)\
+[](bg:#1572A1 fg:#FFA500)\
 $directory\
 [](fg:#1572A1 bg:#F5B17B)\
 $git_branch\
@@ -18,9 +18,10 @@ $nodejs\
 $nim\
 $rust\
 $dotnet\
-[](fg:#798777 bg:#FD7E89)\
-$aws\
-[](fg:#FD7E89 bg:#2F8F9D)\
+[](fg:#798777 bg:#0078d4)\
+$azure\
+${env_var.AZURE_USERTYPE}\
+[](fg:#0078d4 bg:#2F8F9D)\
 $kubernetes\
 [](fg:#2F8F9D bg:#33658A)\
 $time\
@@ -41,6 +42,12 @@ format = '$user'
 ssh_only = false
 format = "@$hostname "
 disabled = false
+
+[env_var]
+disabled = true
+format = '$env_value/'
+variable = "INSTANCE_NAME"
+default = "-"
 
 [directory]
 style = "bg:#1572A1"
@@ -153,14 +160,20 @@ symbol = " "
 style = "bg:#2F8F9D"
 format = '[[ $symbol $context ](bg:#2F8F9D)]($style) $path'
 
-[aws]
-format = '[$symbol($profile )(\($region\) )]($style)'
-style = "fg:#52524E bg:#FD7E89"
-symbol = "☁️ "
+[azure]
+disabled = false
+#format = "on [$symbol($username)]($style) "
+#format = "[$symbol($username)]($style)"
+format = "[$symbol($subscription)]($style)"
+symbol = "󰠅 "
+#style = "blue bold"
+style = "bg:#0078d4"
 
-[aws.region_aliases]
-ap-southeast-2 = "au"
-us-east-1 = "va"
+[azure.subscription_aliases]
+very-long-subscription-name = 'vlsn'
 
-[aws.profile_aliases]
-CompanyGroupFrobozzOnCallAccess = 'Frobozz'
+[env_var.AZURE_USERTYPE]
+disabled = false
+variable = "AZURE_USERTYPE"
+format = "[/$symbol($env_value)]($style)"
+style = "bg:#0078d4"

@@ -12,8 +12,10 @@ git clone https://github.com/iyongmin01/.dotfiles --recursive --shallow-submodul
 
 python3
 ```bash
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 ```
+
+### AWS
 
 awscli
 ```bash
@@ -24,6 +26,20 @@ $ aws --version
 aws-cli/2.7.6 Python/3.9.11 Linux/5.4.0-1071-aws exe/x86_64.ubuntu.18 prompt/off
 
 $ aws configure
+```
+
+### Azure
+
+azcli
+```bash
+$ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+$ az version                          
+{
+  "azure-cli": "2.67.0",
+  "azure-cli-core": "2.67.0",
+  "azure-cli-telemetry": "1.1.0",
+  "extensions": {}
+}
 ```
 
 ## Install
@@ -75,7 +91,16 @@ vi ~/.ssh/authorized_keys
 AWS Themes
 ```bash
 $ vi .zshenv
-export STARSHIP_CONFIG=~/.dotfiles/themes/starship/pastel-powerline-aws.toml
+source ~/.dotfiles/.zshrc_aws
 
 $ aws eks --region ${AWS_REGION} update-kubeconfig --name ${CLUSTER_NAME}
+```
+
+### Azure
+AWS Themes
+```bash
+$ vi .zshenv
+source ~/.dotfiles/.zshrc_azure
+
+$ az login
 ```

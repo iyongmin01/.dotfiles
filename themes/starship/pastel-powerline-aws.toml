@@ -17,6 +17,7 @@ $julia\
 $nodejs\
 $nim\
 $rust\
+$dotnet\
 [](fg:#798777 bg:#FD7E89)\
 $aws\
 [](fg:#FD7E89 bg:#2F8F9D)\
@@ -116,12 +117,17 @@ style = "bg:#798777"
 format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [nim]
-symbol = " "
+symbol = "👑"
 style = "bg:#798777"
 format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [rust]
-symbol = ""
+symbol = "🦀"
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
+
+[dotnet]
+symbol = "🥅"
 style = "bg:#798777"
 format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
