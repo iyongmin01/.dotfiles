@@ -176,5 +176,5 @@ very-long-subscription-name = 'vlsn'
 [env_var.AZURE_USERTYPE]
 disabled = false
 variable = "AZURE_USERTYPE"
-format = "[@$symbol($env_value)]($style)"
+format = '[ \($env_value\)]($style)'
 style = "bg:#0078d4"
